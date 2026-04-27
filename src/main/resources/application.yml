@@ -1,0 +1,7 @@
+simulation:
+  largeur: 10
+  hauteur: 10
+  probabilite: 0.3
+  feuxInitiaux:
+    - [5, 5]
+    - [2, 3]
