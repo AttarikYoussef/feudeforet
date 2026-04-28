@@ -90,6 +90,27 @@ Ou directement depuis l’IDE en lançant la classe FeudeforetApplication.
 .....F....
 ```
 
+## Structure du projet
+
+
+```yaml
+domaine/ 
+  modele/              → Foret, EtatCase 
+  service/             → logique du feu 
+
+application/           → gestion de la simulation 
+
+infrastructure/        → affichage, random 
+
+config/                → configuration Spring
+```
+
+## Points importants du projet
+- code simple et lisible
+- séparation des responsabilités
+- logique métier testée
+- configuration externe
+
 ## Tests unitaires
 
 Les tests sont faits avec JUnit.
@@ -140,26 +161,6 @@ Exemple :
 valeur = 0.1 → le feu se propage \
 valeur = 0.9 → le feu ne se propage pas
 
-## Structure du projet
-
-
-```yaml
-domaine/ 
-  modele/              → Foret, EtatCase 
-  service/             → logique du feu 
-
-application/           → gestion de la simulation 
-
-infrastructure/        → affichage, random 
-
-config/                → configuration Spring
-```
-
-## Points importants du projet
-- code simple et lisible
-- séparation des responsabilités
-- logique métier testée
-- configuration externe
 
 ## Améliorations possibles
 
