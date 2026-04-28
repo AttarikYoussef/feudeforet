@@ -2,8 +2,17 @@ package com.feudeforet.infrastructure.affichage;
 
 import com.feudeforet.domaine.modele.Foret;
 
+/**
+ * Affiche la forêt dans la console
+ */
 public class AfficheurConsole {
 	
+	/**
+	 * Affiche la grille de la forêt
+	 *
+	 * @param foret forêt à afficher
+	 * @param int etape 
+	 */
 	public void afficher(Foret foret, int etape) {
 
         System.out.println("Étape " + etape);

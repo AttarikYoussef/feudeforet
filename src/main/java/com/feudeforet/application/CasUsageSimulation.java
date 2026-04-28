@@ -5,6 +5,9 @@ import com.feudeforet.domaine.modele.Foret;
 import com.feudeforet.domaine.service.ServicePropagationFeu;
 import com.feudeforet.infrastructure.affichage.AfficheurConsole;
 
+/**
+ * Lance la simulation du feu
+ */
 public class CasUsageSimulation {
 	
 	private final ServicePropagationFeu service;
@@ -15,6 +18,11 @@ public class CasUsageSimulation {
         this.afficheur = afficheur;
     }
     
+    /**
+     * Exécute la simulation jusqu'à extinction du feu
+     *
+     * @param foret forêt initiale
+     */
     public void executer(Foret foret) {
 
         int etape = 0;

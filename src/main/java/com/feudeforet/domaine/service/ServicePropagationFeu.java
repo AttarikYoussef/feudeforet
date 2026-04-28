@@ -4,6 +4,9 @@ import com.feudeforet.domaine.modele.EtatCase;
 import com.feudeforet.domaine.modele.Foret;
 import com.feudeforet.domaine.port.GenerateurAleatoire;
 
+/**
+ * Service qui gère la propagation du feu
+ */
 public class ServicePropagationFeu {
 	
 	private final double probabilite;
@@ -14,6 +17,12 @@ public class ServicePropagationFeu {
         this.aleatoire = aleatoire;
     }
     
+    /**
+     * Calcule l'état de la forêt à l'étape suivante
+     *
+     * @param actuelle la forêt à l'instant t
+     * @return la forêt à l'instant t+1
+     */
     public Foret etapeSuivante(Foret foret) {
 
         Foret suivante = foret.copier();
@@ -33,6 +42,14 @@ public class ServicePropagationFeu {
         return suivante;
     }
     
+    /**
+     * Tente de propager le feu aux cases voisines
+     *
+     * @param actuelle la forêt actuelle
+     * @param suivante la forêt suivante
+     * @param x position x de la case en feu
+     * @param y position y de la case en feu
+     */
     private void propager(Foret actuelle, Foret suivante, int x, int y) {
 
         int[][] directions = {

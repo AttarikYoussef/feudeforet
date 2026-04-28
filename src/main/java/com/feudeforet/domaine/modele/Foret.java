@@ -1,11 +1,20 @@
 package com.feudeforet.domaine.modele;
 
+/**
+ * Représente la grille de la forêt
+ */
 public class Foret {
 	
 		private final int largeur;
 	    private final int hauteur;
 	    private final EtatCase[][] grille;
 	
+	    /**
+	     * Crée une forêt avec une taille donnée
+	     *
+	     * @param largeur nombre de colonnes
+	     * @param hauteur nombre de lignes
+	     */
 	    public Foret(int largeur, int hauteur) {
 	        this.largeur = largeur;
 	        this.hauteur = hauteur;
@@ -18,14 +27,35 @@ public class Foret {
 	        }
 	    }
 	
+	    /**
+	     * Retourne l'état d'une case
+	     *
+	     * @param x position x
+	     * @param y position y
+	     * @return l'état de la case
+	     */
 	    public EtatCase get(int x, int y) {
 	        return grille[x][y];
 	    }
 	
+	    /**
+	     * Modifie l'état d'une case
+	     *
+	     * @param x position x
+	     * @param y position y
+	     * @param etat nouvel état de la case
+	     */
 	    public void set(int x, int y, EtatCase etat) {
 	        grille[x][y] = etat;
 	    }
 	
+	    /**
+	     * Vérifie si une position est dans la grille
+	     *
+	     * @param x position x
+	     * @param y position y
+	     * @return true si la position est valide
+	     */
 	    public boolean estDansLaGrille(int x, int y) {
 	        return x >= 0 && x < hauteur && y >= 0 && y < largeur;
 	    }
